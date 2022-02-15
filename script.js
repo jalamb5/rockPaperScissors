@@ -39,10 +39,20 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let computerScore = 0
+    let playerScore = 0
     for (let i = 0; i < 5; i++) {
         let computerSelection = computerPlay();
         let playerSelection = prompt('Make your choice: rock, paper, scissors');
-        console.log(playRound(playerSelection, computerSelection));
+        let score = playRound(playerSelection, computerSelection);
+        if (score.includes('You Win')) {
+            playerScore++;
+        }
+        else if (score.includes('You Lose')) {
+            computerScore++;
+        }
+        console.log(score);
+        console.log(`The score is: Player: ${playerScore}, Computer: ${computerScore}`)
     }
 }
 
