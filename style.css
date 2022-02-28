@@ -1,0 +1,23 @@
+body {
+    background-color: ghostwhite;
+    text-align: center;
+}
+
+#results {
+    font-weight: bold;
+}
+
+.youwon {
+    color: green;
+}
+
+.youlost {
+    color: red;
+}
+
+button {
+    border-radius: 2rem;
+    background-color: white;
+    padding: 1ch;
+    margin: 2ch;
+}

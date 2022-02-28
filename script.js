@@ -95,10 +95,12 @@ function score(winner) {
         scissors.style.display = 'none';
         let win = document.createElement('p');
         if (playerScore > computerScore) {
-            win.innerText = `YOU WON! in ${round} rounds`;
+             win.innerText = `YOU WON! in ${round} rounds`;
+             win.className = 'youwon';   
         }
         else {
             win.innerText = `YOU LOST! in ${round} rounds`;
+            win.className = 'youlost';
         }
         results.prepend(win);
         let restart = document.createElement('button');
